@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Stay Hotel</title>
+    <meta name="description" content="Luxury Stay Hotel offers elegant rooms, premium amenities, and top-notch services for a perfect stay.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">LuxuryStay</div>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <button class="book-btn">Book Now</button>
+    </nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Luxury Stay Hotel</h1>
+        <p>Comfort • Elegance • Premium Service</p>
+    </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms" id="rooms">
+    <h2 class="rooms-heading">Our Rooms</h2>
+    <div class="room-grid">
+
+        <!-- Room 1 -->
+        <div class="room" onclick="openModal(1)">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Single Room">
+            <h3>Single Room</h3>
+            <p>$80 / Night</p>
+            <p class="rating">⭐⭐⭐⭐☆ 4.0</p>
+            <ul class="amenities">
+                <li>Free Wi-Fi</li>
+                <li>Queen-size bed</li>
+                <li>Flat-screen TV</li>
+                <li>Complimentary breakfast</li>
+            </ul>
+             <button class="book-btn" onclick="openModal(1)">Book Now</button>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room" onclick="openModal(2)">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Double Room">
+            <h3>Double Room</h3>
+            <p>$120 / Night</p>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0</p>
+            <ul class="amenities">
+                <li>Free Wi-Fi</li>
+                <li>Two queen beds</li>
+                <li>Mini fridge</li>
+                <li>Complimentary breakfast</li>
+            </ul>
+             <button class="book-btn" onclick="openModal(1)">Book Now</button>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room" onclick="openModal(3)">
+            <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb2101d" alt="Deluxe Room">
+            <h3>Deluxe Room</h3>
+            <p>$180 / Night</p>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0</p>
+            <ul class="amenities">
+                <li>Free Wi-Fi</li>
+                <li>King-size bed</li>
+                <li>Mini bar</li>
+                <li>Sea view</li>
+            </ul>
+             <button class="book-btn" onclick="openModal(1)">Book Now</button>
+        </div>
+
+        <!-- Room 4 -->
+        <div class="room" onclick="openModal(4)">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Family Suite">
+            <h3>Family Suite</h3>
+            <p>$220 / Night</p>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0</p>
+            <ul class="amenities">
+                <li>Free Wi-Fi</li>
+                <li>2 Bedrooms</li>
+                <li>Living area</li>
+                <li>Complimentary breakfast</li>
+            </ul>
+             <button class="book-btn" onclick="openModal(1)">Book Now</button>
+        </div>
+
+        <!-- Room 5 -->
+        <div class="room" onclick="openModal(5)">
+            <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2a89" alt="Presidential Suite">
+            <h3>Presidential Suite</h3>
+            <p>$350 / Night</p>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0</p>
+            <ul class="amenities">
+                <li>Free Wi-Fi</li>
+                <li>Private pool</li>
+                <li>King-size bed</li>
+                <li>Sea view & Lounge</li>
+            </ul>
+             <button class="book-btn" onclick="openModal(1)">Book Now</button>
+        </div>
+
+        <!-- Room 6 -->
+        <div class="room" onclick="openModal(6)">
+            <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb2101d" alt="New Luxury Room">
+            <h3>Luxury Suite</h3>
+            <p>$500 / Night</p>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0</p>
+            <ul class="amenities">
+                <li>Free Wi-Fi</li>
+                <li>King-size bed</li>
+                <li>Private balcony</li>
+                <li>Complimentary dinner</li>
+            </ul>
+             <button class="book-btn" onclick="openModal(1)">Book Now</button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ROOM MODAL -->
+<div id="roomModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-body">
+            <!-- JS will inject room content here -->
+        </div>
+    </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+    <h2>Guest Reviews</h2>
+    <div class="review">
+        <p><strong>John D.</strong></p>
+        <p class="rating">⭐⭐⭐⭐⭐ 5.0</p>
+        <p>Amazing service and beautiful rooms.</p>
+    </div>
+    <div class="review">
+        <p><strong>Sarah K.</strong></p>
+        <p class="rating">⭐⭐⭐⭐☆ 4.5</p>
+        <p>Very clean and friendly staff.</p>
+    </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="amenities-section" id="amenities">
+    <h2>Hotel Amenities</h2>
+    <div class="amenities-grid">
+        <div class="amenity">
+            <img src="https://images.unsplash.com/photo-1582719478144-6f0fcd8f48b8" alt="Spa">
+            <h3>Spa & Wellness</h3>
+        </div>
+        <div class="amenity">
+            <img src="https://images.unsplash.com/photo-1509057199576-632a47484ece" alt="Pool">
+            <h3>Swimming Pool</h3>
+        </div>
+        <div class="amenity">
+            <img src="https://images.unsplash.com/photo-1576675784412-9d0f26763a92" alt="Gym">
+            <h3>Fitness Center</h3>
+        </div>
+        <div class="amenity">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Restaurant">
+            <h3>Restaurant & Bar</h3>
+        </div>
+    </div>
+</section>
+
+<!-- NEARBY ATTRACTIONS -->
+<section class="attractions-section" id="attractions">
+    <h2>Nearby Attractions</h2>
+    <div class="attractions-grid">
+        <div class="attraction">
+            <img src="https://images.unsplash.com/photo-1526779259212-78be5c20ecb4" alt="Beach">
+            <h3>Paradise Beach</h3>
+        </div>
+        <div class="attraction">
+            <img src="https://images.unsplash.com/photo-1501876725168-00c445821c9e" alt="Museum">
+            <h3>City Museum</h3>
+        </div>
+        <div class="attraction">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Park">
+            <h3>Central Park</h3>
+        </div>
+        <div class="attraction">
+            <img src="https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee" alt="Shopping">
+            <h3>Shopping Street</h3>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Room 1">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Room 2">
+        <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb2101d" alt="Deluxe Room">
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Suite 1">
+        <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2a89" alt="Presidential Suite">
+        <img src="https://images.unsplash.com/photo-1582719478144-6f0fcd8f48b8" alt="Spa">
+    </div>
+</section>
+
+<!-- SPECIAL OFFERS -->
+<section class="offers-section" id="offers">
+    <h2>Special Offers</h2>
+    <div class="offers-grid">
+        <div class="offer">
+            <h3>Weekend Getaway</h3>
+            <p>Stay 2 nights, get 1 night free! ✨</p>
+        </div>
+        <div class="offer">
+            <h3>Couples Retreat</h3>
+            <p>Romantic dinner + Spa included ❤️</p>
+        </div>
+        <div class="offer">
+            <h3>Family Package</h3>
+            <p>Kids stay free + complimentary breakfast 👨‍👩‍👧‍👦</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3 class="faq-question">What is the check-in time?</h3>
+        <p class="faq-answer">Check-in starts at 2:00 PM and check-out is until 11:00 AM.</p>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">Do you offer free Wi-Fi?</h3>
+        <p class="faq-answer">Yes, free high-speed Wi-Fi is available throughout the hotel.</p>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">Is parking available?</h3>
+        <p class="faq-answer">Yes, we offer complimentary valet parking for all guests.</p>
+    </div>
+</section>
+
+<!-- BACK TO TOP BUTTON -->
+<button onclick="topFunction()" id="topBtn" title="Go to top">⬆️</button>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-buttons">
+    <a href="tel:+1234567890" class="call">📞</a>
+    <a href="https://wa.me/1234567890" class="whatsapp">💬</a>
+</div>
+
+<!-- =================== ADDITIONAL SECTIONS START =================== -->
+
+<!-- ABOUT US -->
+<section class="aboutus-section" id="aboutus">
+    <h2>About Us</h2>
+    <p>Welcome to Luxury Stay Hotel, where comfort meets elegance. Our hotel has been providing exceptional service and luxurious accommodations for over a decade, ensuring a memorable stay for every guest.</p>
+</section>
+
+<!-- HOTEL INFORMATION -->
+<section class="hotelinfo-section" id="hotelinfo">
+    <h2>Hotel Information</h2>
+    <ul>
+        <li><strong>Check-in:</strong> 2:00 PM</li>
+        <li><strong>Check-out:</strong> 11:00 AM</li>
+        <li><strong>Phone:</strong> +123 456 7890</li>
+        <li><strong>Email:</strong> info@luxurystay.com</li>
+        <li><strong>Policies:</strong> Pets allowed, non-smoking rooms available</li>
+    </ul>
+</section>
+
+<!-- LIVE LOCATION -->
+<section class="location-section" id="location">
+    <h2>Our Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.0!2d90.0!3d23.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQyJzMwLjAiTiA5MMKwMDAnMDAuMCJF!5e0!3m2!1sen!2sbd!4v1600000000000!5m2!1sen!2sbd" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<!-- TRAVEL STORIES -->
+<section class="stories-section" id="stories">
+    <h2>Travel Stories</h2>
+    <div class="stories-grid">
+        <div class="story">
+            <p>"Our stay at Luxury Stay was unforgettable! The staff made us feel like royalty." – Alice P.</p>
+        </div>
+        <div class="story">
+            <p>"Beautiful rooms, amazing location, and fantastic service." – John D.</p>
+        </div>
+        <div class="story">
+            <p>"The perfect family vacation spot! Kids loved the pool." – Sarah K.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEEDBACK -->
+<section class="contact" id="contact">
+    <h2>Give Your Feedback</h2>
+    <input type="text" placeholder="Your Name">
+    <textarea placeholder="Your Feedback"></textarea>
+    <button class="feedback-btn" onclick="sendFeedback()">Send Feedback</button>
+    <p id="feedback-msg" class="feedback-msg"></p>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section" id="newsletter">
+    <h2>Subscribe to our Newsletter</h2>
+    <p>Get exclusive offers and updates straight to your inbox!</p>
+    <input type="email" placeholder="Enter your email">
+    <button onclick="subscribeNewsletter()">Subscribe</button>
+    <p id="newsletter-msg" class="feedback-msg"></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3>Luxury Stay Hotel</h3>
+            <p>Experience comfort and elegance with world-class service.</p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>Phone: +123 456 7890</p>
+            <p>Email: info@luxurystay.com</p>
+        </div>
+
+        <div>
+            <h3>Location</h3>
+            <p>123 Beach Road</p>
+            <p>Paradise City</p>
+        </div>
+    </div>
+
+    <div class="bottom">
+        © 2026 Luxury Stay Hotel. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<!-- Room Modal -->
+<div id="roomModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-body"></div>
+        <button class="book-now" onclick="redirectToWhatsapp()">Book Now via WhatsApp</button>
+    </div>
+</div>
+
+</body>
+</html>
